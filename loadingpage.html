@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <style>
+        body {
+            background-image: url(images/Background.png);
+            font-family: 'Roboto', sans-serif;
+            margin-top: 0px; 
+            margin-bottom: 0px; 
+            margin-left: 0px; 
+            margin-right: 0px;
+            font-size: 14pt;
+        }
+
+        .center {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+
+        }
+        .message {
+        color: black;
+        font-size: 2rem;
+        }
+
+        .dino{
+            max-width: 10%;
+        }
+
+    </style>
+    <div class="center">
+        
+        Finding all public parking spots near
+        <script>
+            let adressName = localStorage.getItem("adressName");
+            document.write(adressName+"...");
+            var timer = setTimeout(function() {
+            window.location='foundSpotPrompt.html'
+            }, 3000);
+            
+        
+        </script>
+        
+        <img class="dino" src="images/dino-running-gif.crdownload" alt="dino-running-gif">
+    </div>
+  
+</body>
+</html>
+
