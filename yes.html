@@ -16,21 +16,25 @@
 
     .top-container {
 
-      display: grid;
-      grid-template-columns: 800px 1fr;
-      grid-template-rows:  200px 1fr;
-      float: right;
-      background-color: lightgreen;
+display: grid;
+grid-template-columns: 800px 1fr;
+grid-template-rows:  200px 1fr;
+float: right;
+background-color: lightblue;
+opacity: 0.8;
+margin-top: 15px;
 
-      border-color: red;
-      
-      border-style: solid;
-    
-    }
 
-    .message {
-      margin-top: 0;
-    }
+border-radius: 25px;
+
+
+}
+
+.message {
+text-align: center;
+}
+
+  
     
     
   </style>
@@ -39,8 +43,19 @@
   <div class="top-container">
     <div>
       <h1 class="message">We found a spot for you!</h1>
-      <a href="final.html"><h1 class="message2">Nearest address: 1000 Rue De La Gauchetière Ouest, Montreal, QC, Canada</h1></a>
-      <a href="no.html">This is not a parking spot/ Find me another spot.</a>
+      <a href="map.html">
+      <h2 style="text-align: center;">
+      <script>
+            let adressName = localStorage.getItem("adressName");
+
+      document.write(adressName);
+      </script>
+      </h2> 
+      </a>
+      <div style="text-align: center;">
+        Results: 2/2 Found
+      </div>
+      
      
     </div>
   </div>  

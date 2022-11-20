@@ -24,37 +24,65 @@
         }
 
         .center {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: black;
+            display: block;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
 
         }
-        .message {
-        color: black;
-        font-size: 2rem;
-        }
-
+        
+    
         .dino{
-            max-width: 10%;
+ 
+            max-width: 150px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
         }
+
+        .center:after{
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: bottom;
+            -webkit-animation: ellipsis steps(4, end) 1500ms infinite;
+            animation: ellipsis steps(4, end) 1500ms infinite;
+            content: "\2026";
+            /* ascii code for the ellipsis character */
+            width: 0px;
+        }
+
+        @keyframes ellipsis {
+            to {
+                width: 40px;
+            }
+        }
+
+        @-webkit-keyframes ellipsis {
+            to {
+                width: 40px;
+            }
+        }
+
+
 
     </style>
+
+    <div id="dino"><img class="dino" src="images/train.gif" alt="dino-running-gif">
+    </dino>   
     <div class="center">
+            Finding all public parking spots near
+            <script>
+                let adressName = localStorage.getItem("adressName");
+                document.write(adressName);
+                var timer = setTimeout(function() {
+                window.location='foundSpotPrompt.html'
+                }, 5000);
+            </script>
+
         
-        Finding all public parking spots near
-        <script>
-            let adressName = localStorage.getItem("adressName");
-            document.write(adressName+"...");
-            var timer = setTimeout(function() {
-            window.location='foundSpotPrompt.html'
-            }, 3000);
-            
         
-        </script>
-        
-        <img class="dino" src="images/dino-running-gif.crdownload" alt="dino-running-gif">
     </div>
   
 </body>

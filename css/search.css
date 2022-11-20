@@ -9,9 +9,7 @@ h1{
 
 .topnav {
     height: 60px;
-    background-color: lightgray;
     overflow: hidden;
-    
 }
 
 .topnav a {
@@ -25,7 +23,7 @@ h1{
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: lightgray;
     color: black;   
 }
 
